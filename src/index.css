@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #030712; /* cosmos-950 */
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #f8f1e2; /* parchment-100 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #6b001e; /* wine-700 */
+    color: #fdfaf3; /* parchment-50 */
+  }
+}
