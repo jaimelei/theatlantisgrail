@@ -52,13 +52,13 @@ What Hero needs: navbar overlaying it, the grail logo image, static text, two CT
 
 What this section needs: two-column layout, editorial typography alternating between dramatic callouts and body prose, one book cover image with tilt and shadow, a CTA link. All static — no data files.
 
-- [ ] `src/pages/home/components/SeriesPitch.tsx`
+- [x] `src/pages/home/components/SeriesPitch.tsx`
   - `parchment-100` background, `py-24` vertical padding
   - Desktop: CSS grid `grid-cols-[55fr_45fr]`, gap, `max-w-7xl mx-auto px-6`
   - Left column: alternating `<h2>` (Cormorant Garamond italic, `wine-700`) and `<p>` (Inter, `parchment-600`) blocks for each dramatic beat of the pitch text. All hardcoded strings.
   - Right column: `<img src="/images/qualify.webp">` with `rotate-1` transform, negative margin bottom (`-mb-10`), `shadow-lift`, CSS placeholder if image missing. Small "Get Book 1 Free →" link below.
   - Mobile: single column, cover stacks on top
-- [ ] `src/pages/home/index.tsx` — add `<SeriesPitch>` below `<Hero>`
+- [x] `src/pages/home/index.tsx` — add `<SeriesPitch>` below `<Hero>`
 
 > ✅ After this phase: the dramatic pitch copy and the tilted Qualify cover are visible below the hero.
 
