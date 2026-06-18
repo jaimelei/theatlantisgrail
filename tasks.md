@@ -69,10 +69,10 @@ What this section needs: two-column layout, editorial typography alternating bet
 
 First time we need book data and the scroll reveal hook. Extract shared primitives only if they're used in 2+ places this phase.
 
-- [ ] `src/types/index.ts` — define `BookStatus`, `BuyLink`, `Edition`, `Book` interfaces
-- [ ] `src/data/books.ts` — all 15 books across 4 series with slugs, titles, taglines, series metadata, status, cover paths (`/images/*.webp`), buy links (Amazon, B&N, Kobo, Apple, Google Play), editions with ISBNs
-- [ ] `src/hooks/useScrollReveal.ts` — `IntersectionObserver` hook, returns `[ref, isVisible]`, `threshold: 0.15`
-- [ ] `src/pages/home/components/BookShowcase.tsx`
+- [x] `src/types/index.ts` — define `BookStatus`, `BuyLink`, `Edition`, `Book` interfaces
+- [x] `src/data/books.ts` — all 15 books across 4 series with slugs, titles, taglines, series metadata, status, cover paths (`/images/*.webp`), buy links (Amazon, B&N, Kobo, Apple, Google Play), editions with ISBNs
+- [x] `src/hooks/useScrollReveal.ts` — `IntersectionObserver` hook, returns `[ref, isVisible]`, `threshold: 0.15` (already existed)
+- [x] `src/pages/home/components/BookShowcase.tsx`
   - `cosmos-900` background, `py-24`
   - 4 series groups, each with a series title treatment: Cinzel, gold, flanked by thin `border-t border-gold-400/30` rules (achieved with `flex items-center gap-4`)
   - **Fanned shelf**: `flex` row with covers overlapping via negative `margin-left` on all but the first. Covers: `w-[180px]` with `aspect-[5/8]`. First/active cover: `w-[200px]`. CSS placeholder bg `cosmos-800` with book title text until image lands.
@@ -80,7 +80,7 @@ First time we need book data and the scroll reveal hook. Extract shared primitiv
   - Detail panel: title, tagline, status badge (inline span, not a component yet), and 5 buy link buttons (inline `<a>` tags, not a component yet)
   - Mobile: `overflow-x-auto` horizontal scroll strip with `scroll-snap-type-x`, each cover `snap-start`, detail always visible below
   - Wrap each series group in `useScrollReveal` for fade-up on enter
-- [ ] `src/pages/home/index.tsx` — add `<BookShowcase>`
+- [x] `src/pages/home/index.tsx` — add `<BookShowcase>`
 
 > ✅ After this phase: all 15 books are displayed in the fanned shelf layout per series. Hover interaction works. Data lives in a typed file.
 
