@@ -89,14 +89,14 @@ First time we need book data and the scroll reveal hook. Extract shared primitiv
 ## Phase 5 — Writing Progress Section
 **Commit:** `feat: writing progress bars`
 
-- [ ] `src/pages/home/components/WritingProgress.tsx`
+- [x] `src/pages/home/components/WritingProgress.tsx`
   - `parchment-100` background, compact section `py-16`
   - "What the author is working on right now" label (Inter italic, `parchment-600`)
   - Two progress items hardcoded: DEA (5.53%) and AMREVET DAYS TWO (18.79%)
   - Each: book title in Cinzel, stats in `font-mono text-sm`, custom progress bar — `cosmos-800` track, green fill for DEA, red (`wine-500`) fill for AMREVET, `rounded-full h-2`
   - Bar width driven by CSS custom property `--progress-width` set inline via `style`. Animated with `progressFill` keyframe triggered when `useScrollReveal` fires (`isVisible` → add class with animation)
   - "Current Chapter: Chapter X" line below each bar
-- [ ] `src/pages/home/index.tsx` — add `<WritingProgress>`
+- [x] `src/pages/home/index.tsx` — add `<WritingProgress>`
 
 > ✅ After this phase: the progress bars animate in on scroll. The section is warm and personal.
 
