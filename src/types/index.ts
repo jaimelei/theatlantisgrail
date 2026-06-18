@@ -27,3 +27,14 @@ export interface Book {
   buyLinks: BuyLink[];
   editions?: Edition[];
 }
+
+export interface NewsEntry {
+  id: string;
+  date: string;
+  title: string;
+  body: string;
+  excerpt: string;
+  image?: string;
+  category?: 'Release' | 'Update' | 'Community';
+}
+
