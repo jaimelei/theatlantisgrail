@@ -41,7 +41,7 @@ export default {
       fontFamily: {
         display: ['Cinzel', 'serif'],
         editorial: ['Cormorant Garamond', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
@@ -52,6 +52,7 @@ export default {
       animation: {
         'grail-pulse': 'grailPulse 4s ease-in-out infinite',
         'fade-up': 'fadeUp 0.6s ease-out forwards',
+        'fade-down': 'fadeDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'progress-fill': 'progressFill 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards',
       },
       keyframes: {
@@ -61,6 +62,10 @@ export default {
         },
         fadeUp: {
           from: { opacity: '0', transform: 'translateY(30px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeDown: {
+          from: { opacity: '0', transform: 'translateY(-20px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
         progressFill: {
