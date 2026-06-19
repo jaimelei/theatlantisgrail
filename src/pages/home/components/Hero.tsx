@@ -1,11 +1,8 @@
-import Navbar from '../../../components/layout/Navbar';
 import './Hero.css';
 
 export default function Hero() {
   return (
-    <>
-      <Navbar />
-      <section className="relative min-h-screen bg-cosmos-950 flex items-center justify-start overflow-hidden pt-20">
+    <section className="relative min-h-screen bg-cosmos-950 flex items-center justify-start overflow-hidden pt-20">
         {/* Ambient background elements */}
         <div className="hero-stars absolute inset-0 z-0" />
         <div className="hero-stars-secondary absolute inset-0 z-0" />
@@ -23,7 +20,7 @@ export default function Hero() {
 
         {/* Giant Watermark Logo - positioned on the right */}
         <div className="absolute right-[-10%] lg:right-[5%] top-1/2 -translate-y-1/2 w-[85vh] h-[85vh] z-0 pointer-events-none opacity-[0.08] lg:opacity-[0.14] transition-all duration-1000 flex items-center justify-center">
-          <div className="relative w-full h-full hero-logo-container hero-logo-enter">
+          <div className="relative w-full h-full hero-logo-container">
             <div className="hero-logo-bloom" />
             <div className="hero-logo-ring" />
             <div className="hero-logo-ring-inner" />
@@ -82,6 +79,5 @@ export default function Hero() {
           <div className="hero-scroll-line" />
         </div>
       </section>
-    </>
-  );
-}
+    );
+  }

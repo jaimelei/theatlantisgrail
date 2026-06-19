@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PageLayout from "./components/layout/PageLayout";
 import HomePage from "./pages/home";
 import BooksPage from "./pages/books";
 import NewsPage from "./pages/news";
@@ -9,11 +10,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/books" element={<BooksPage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/community" element={<CommunityPage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/" element={<PageLayout><HomePage /></PageLayout>} />
+        <Route path="/books" element={<PageLayout><BooksPage /></PageLayout>} />
+        <Route path="/news" element={<PageLayout><NewsPage /></PageLayout>} />
+        <Route path="/community" element={<PageLayout><CommunityPage /></PageLayout>} />
+        <Route path="/about" element={<PageLayout><AboutPage /></PageLayout>} />
       </Routes>
     </BrowserRouter>
   );
