@@ -4,6 +4,7 @@ import BookShowcase from './components/BookShowcase';
 import WritingProgress from './components/WritingProgress';
 import LatestNews from './components/LatestNews';
 import CommunityConstellation from './components/CommunityConstellation';
+import FilmCallout from './components/FilmCallout';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <WritingProgress />
       <LatestNews />
       <CommunityConstellation />
+      <FilmCallout />
     </div>
   );
 }
