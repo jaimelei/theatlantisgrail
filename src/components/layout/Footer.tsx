@@ -1,7 +1,34 @@
 import { ArrowRight } from 'lucide-react';
 import { FaGoodreadsG, FaInstagram, FaYoutube, FaDiscord, FaFacebookF } from 'react-icons/fa';
+import useScrollReveal from '../../hooks/useScrollReveal';
+
+// Individual column component with scroll reveal
+function FooterColumn({
+  children,
+  colSpan,
+}: {
+  children: React.ReactNode;
+  colSpan: string;
+}) {
+  const [ref, isVisible] = useScrollReveal<HTMLDivElement>();
+
+  return (
+    <div
+      ref={ref}
+      className={`${colSpan} transition-all duration-700`}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(16px)',
+      }}
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Footer() {
+  const [bottomBarRef, bottomBarVisible] = useScrollReveal<HTMLDivElement>();
+
   const quickLinks = [
     { label: 'Home', href: '/' },
     { label: 'Books', href: '/books' },
@@ -31,7 +58,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-8 pb-6 border-b md:grid-cols-12 md:gap-6 border-gold-400/10">
           {/* Column 1: Wordmark & Info */}
-          <div className="md:col-span-5">
+          <FooterColumn colSpan="md:col-span-5">
             <h2 className="mb-2 text-lg tracking-wide font-cinzel text-gold-400">
               THE ATLANTIS GRAIL
             </h2>
@@ -39,10 +66,10 @@ export default function Footer() {
             <p className="max-w-sm text-sm leading-relaxed font-inter text-parchment-400">
               Epic science fiction series spanning galaxies and destinies.
             </p>
-          </div>
+          </FooterColumn>
 
           {/* Column 2: Quick Links */}
-          <div className="md:col-span-3">
+          <FooterColumn colSpan="md:col-span-3">
             <h3 className="mb-3 text-xs tracking-[0.2em] uppercase font-cinzel text-parchment-200">
               Navigation
             </h3>
@@ -58,10 +85,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </FooterColumn>
 
           {/* Column 3: Newsletter */}
-          <div className="md:col-span-4">
+          <FooterColumn colSpan="md:col-span-4">
             <h3 className="mb-3 text-xs tracking-[0.2em] uppercase font-cinzel text-parchment-200">
               Never miss a release
             </h3>
@@ -89,17 +116,25 @@ export default function Footer() {
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
-          </div>
+          </FooterColumn>
         </div>
 
         {/* Bottom bar: social + legal */}
-        <div className="flex flex-col items-center gap-4 pt-5 md:flex-row md:justify-between">
+        <div
+          ref={bottomBarRef}
+          className="flex flex-col items-center gap-4 pt-5 transition-all duration-700 md:flex-row md:justify-between"
+          style={{
+            opacity: bottomBarVisible ? 1 : 0,
+            transform: bottomBarVisible ? 'translateY(0)' : 'translateY(16px)',
+          }}
+        >
           <p className="order-2 text-xs font-inter text-parchment-400 md:order-1">
             © 2026 Vera Nazarian. All rights reserved.
           </p>
 
           <div className="flex order-1 gap-3 md:order-2">
             {socialLinks.map((social) => (
+              
               <a
                 key={social.label}
                 href={social.url}

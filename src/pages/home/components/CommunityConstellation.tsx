@@ -88,6 +88,7 @@ function TooltipCard({
       <p style={{ marginBottom: '12px', fontSize: '12px', color: '#e7e5e4' }}>
         {node.description}
       </p>
+      
       <a
         href={node.url}
         target="_blank"
@@ -216,6 +217,7 @@ function MobileNodeItem({ node }: { node: ConstellationNode }) {
     >
       <h3 className="mb-1 font-cinzel text-gold-400">{node.name}</h3>
       <p className="mb-3 text-sm text-parchment-300">{node.description}</p>
+      
       <a
         href={node.url}
         target="_blank"
@@ -230,11 +232,19 @@ function MobileNodeItem({ node }: { node: ConstellationNode }) {
 
 export default function CommunityConstellation() {
   const [pinnedId, setPinnedId] = useState<string | null>(null);
+  const [headerRef, headerVisible] = useScrollReveal<HTMLHeadingElement>();
 
   return (
     <section className="pt-20 pb-6 bg-cosmos-950">
       <div className="px-6 mx-auto max-w-7xl">
-        <h2 className="mb-12 text-2xl font-bold tracking-widest text-center uppercase font-display sm:text-3xl text-gold-400">
+        <h2
+          ref={headerRef}
+          className="mb-12 text-2xl font-bold tracking-widest text-center uppercase transition-all duration-700 font-display sm:text-3xl text-gold-400"
+          style={{
+            opacity: headerVisible ? 1 : 0,
+            transform: headerVisible ? 'translateY(0)' : 'translateY(16px)',
+          }}
+        >
           The Fandom
         </h2>
 
