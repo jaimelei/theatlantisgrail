@@ -5,6 +5,7 @@ import WritingProgress from './components/WritingProgress';
 import LatestNews from './components/LatestNews';
 import CommunityConstellation from './components/CommunityConstellation';
 import FilmCallout from './components/FilmCallout';
+import EmailCta from './components/EmailCta';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <LatestNews />
       <CommunityConstellation />
       <FilmCallout />
+      <EmailCta />
     </div>
   );
 }
