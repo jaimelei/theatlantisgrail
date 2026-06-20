@@ -6,25 +6,32 @@
 
 @layer base {
   html {
-    background-color: #030712; /* cosmos-950 */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    background-color: #030712;
+    /* cosmos-950 */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 
   html::-webkit-scrollbar,
   ::-webkit-scrollbar:vertical {
-    display: none; /* Chrome, Safari and Opera */
+    display: none;
+    /* Chrome, Safari and Opera */
   }
 
   body {
     font-family: 'Montserrat', sans-serif;
-    color: #f8f1e2; /* parchment-100 */
+    color: #f8f1e2;
+    /* parchment-100 */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: #6b001e; /* wine-700 */
-    color: #fdfaf3; /* parchment-50 */
+    background-color: #6b001e;
+    /* wine-700 */
+    color: #fdfaf3;
+    /* parchment-50 */
   }
 }

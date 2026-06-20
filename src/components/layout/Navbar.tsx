@@ -58,12 +58,12 @@ export default function Navbar() {
 
         {/* Right: CTA Button (Desktop Only) */}
         <div className="hidden md:flex items-center gap-4">
-          <a
-            href="#"
+          <Link
+            to="/books"
             className="px-6 py-2 bg-gold-400/10 border border-gold-400/30 rounded-full font-body text-xs font-semibold uppercase tracking-widest text-gold-300 hover:bg-gold-400 hover:text-cosmos-950 hover:border-gold-400 transition-all duration-300"
           >
             Start Reading
-          </a>
+          </Link>
         </div>
 
         {/* Mobile: Hamburger Menu */}
@@ -76,7 +76,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu (Stub for Phase 13) */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-cosmos-900 border-t border-gold-400/20 px-6 py-4 space-y-3">
           {navLinks.map(({ label, path }) => (
@@ -90,12 +90,13 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-3 border-t border-gold-400/20">
-            <a
-              href="#"
+            <Link
+              to="/books"
               className="block text-center px-6 py-2 bg-gold-400/10 border border-gold-400/30 rounded-full font-body text-xs font-semibold uppercase tracking-widest text-gold-300 hover:bg-gold-400 hover:text-cosmos-950 transition-all duration-300"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Start Reading
-            </a>
+            </Link>
           </div>
         </div>
       )}

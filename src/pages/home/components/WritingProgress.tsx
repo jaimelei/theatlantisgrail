@@ -7,7 +7,7 @@ const progressItems = [
     progress: '5.53%',
     stats: '11,057 / 200,000 words',
     chapter: 'Chapter 4',
-    barColor: 'bg-green-500',
+    barColor: 'bg-gold-400',
     customProperty: '5.53%'
   },
   {
@@ -16,7 +16,7 @@ const progressItems = [
     progress: '18.79%',
     stats: '37,580 / 200,000 words',
     chapter: 'Chapter 9',
-    barColor: 'bg-wine-500',
+    barColor: 'bg-gold-400',
     customProperty: '18.79%'
   }
 ];

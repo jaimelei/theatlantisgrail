@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 export default function Hero() {
@@ -58,18 +59,18 @@ export default function Hero() {
 
           {/* CTA Buttons - Side by Side */}
           <div className="hero-enter hero-enter-delay-4 flex flex-wrap gap-4 sm:gap-6 w-full sm:w-auto">
-            <a
-              href="#"
+            <Link
+              to="/books"
               className="hero-btn-primary flex-1 sm:flex-none text-center px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-cosmos-950 font-body text-sm font-bold tracking-wider uppercase rounded-lg hover:from-gold-400 hover:to-gold-300 transition-all duration-300 hover:shadow-glow transform hover:-translate-y-0.5"
             >
               Get Book 1 Free
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/books"
               className="hero-btn-outline flex-1 sm:flex-none text-center px-8 py-4 border border-gold-400/50 text-gold-300 font-body text-sm font-bold tracking-wider uppercase rounded-lg hover:bg-gold-400/10 hover:border-gold-400 transition-all duration-300 transform hover:-translate-y-0.5"
             >
               Explore Series
-            </a>
+            </Link>
           </div>
         </div>
 
