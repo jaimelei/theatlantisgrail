@@ -53,3 +53,14 @@ export interface CommunityGroup {
   links: CommunityLink[];
 }
 
+export interface OtherWork {
+  title: string;
+  url: string;
+}
+
+export interface FaqEntry {
+  question: string;
+  answer: string;
+  isReadingOrder?: boolean;
+}
+
