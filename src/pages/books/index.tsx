@@ -8,6 +8,14 @@ export default function BooksPage() {
   const novellaBooks = books.filter((b) => b.series === 'novella');
   const extraBooks = books.filter((b) => b.series === 'extras');
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-cosmos-950 min-h-screen text-parchment-100 selection:bg-wine-700 selection:text-parchment-50">
       {/* Page Hero */}
@@ -31,23 +39,43 @@ export default function BooksPage() {
           Series Index
         </h4>
         <nav className="flex flex-col gap-2 font-display text-[11px] font-bold uppercase tracking-wider text-parchment-200">
-          <a href="#original" className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group">
+          <a
+            href="#original"
+            onClick={(e) => handleScroll(e, 'original')}
+            className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400/40 group-hover:bg-gold-400 transition-colors" />
             Original Series
           </a>
-          <a href="#prequel" className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group">
+          <a
+            href="#prequel"
+            onClick={(e) => handleScroll(e, 'prequel')}
+            className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400/40 group-hover:bg-gold-400 transition-colors" />
             Prequels
           </a>
-          <a href="#novella" className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group">
+          <a
+            href="#novella"
+            onClick={(e) => handleScroll(e, 'novella')}
+            className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400/40 group-hover:bg-gold-400 transition-colors" />
             Novellas
           </a>
-          <a href="#extras" className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group">
+          <a
+            href="#extras"
+            onClick={(e) => handleScroll(e, 'extras')}
+            className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400/40 group-hover:bg-gold-400 transition-colors" />
             Extras
           </a>
-          <a href="#reading-order" className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group">
+          <a
+            href="#reading-order"
+            onClick={(e) => handleScroll(e, 'reading-order')}
+            className="hover:text-gold-400 transition-colors flex items-center gap-1.5 group"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400/40 group-hover:bg-gold-400 transition-colors" />
             Reading Order
           </a>
