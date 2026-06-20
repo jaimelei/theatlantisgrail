@@ -8,6 +8,13 @@
   html {
     scroll-behavior: smooth;
     background-color: #030712; /* cosmos-950 */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  html::-webkit-scrollbar,
+  ::-webkit-scrollbar:vertical {
+    display: none; /* Chrome, Safari and Opera */
   }
 
   body {
