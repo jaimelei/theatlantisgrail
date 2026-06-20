@@ -24,7 +24,8 @@ export const books: Book[] = [
     editions: [
       { format: 'Paperback', isbn13: '978-1612423012', price: '$18.99' },
       { format: 'Hardcover', isbn13: '978-1612423005', price: '$29.99' }
-    ]
+    ],
+    synopsis: 'The year is 2047, and an extinction-level asteroid is hurtling toward Earth. The descendants of ancient Atlantis have returned in their silver ships to offer a chance at salvation, but they can only rescue a tiny percentage of the human population. To be chosen, teens must be bright, talented, athletic, and—above all—they must Qualify. Gwen Lark, a self-described klutz and a nerd, must fight for her life against impossible odds and world-class competition to save her family and earn her place in the stars.'
   },
   {
     slug: 'compete',
@@ -48,7 +49,8 @@ export const books: Book[] = [
     editions: [
       { format: 'Paperback', isbn13: '978-1612423036', price: '$19.99' },
       { format: 'Hardcover', isbn13: '978-1612423029', price: '$30.99' }
-    ]
+    ],
+    synopsis: 'With Earth facing destruction, teenage nerd and awkward genius Gwen Lark has barely managed to qualify for rescue aboard one of the thousands of ark-ships headed to the ancient colony planet, Atlantis. As the year-long voyage in space begins, she must navigate a wondrously alien environment while making difficult life choices. Catching the personal interest of Aeson Kassiopei, the Imperial Prince of Atlantis, Gwen must convince him she has what it takes to compete in the deadly Games of the Atlantis Grail.'
   },
   {
     slug: 'win',
@@ -72,7 +74,8 @@ export const books: Book[] = [
     editions: [
       { format: 'Paperback', isbn13: '978-1612423050', price: '$21.99' },
       { format: 'Hardcover', isbn13: '978-1612423043', price: '$32.99' }
-    ]
+    ],
+    synopsis: "The Games are forever. It's one thing to Qualify and Compete—now, Gwen Lark must Win. Having successfully reached Atlantis, Gwen finds the new world is far from paradise, classified as a non-citizen with limited rights. Her rare and powerful Logos voice is seen as a threat to the ruling Kassiopei Imperial Dynasty. To protect herself, her family, and everything she holds dear, Gwen is forced to compete in the brutal, deadly, and highly sophisticated Games of the Atlantis Grail."
   },
   {
     slug: 'survive',
@@ -96,7 +99,8 @@ export const books: Book[] = [
     editions: [
       { format: 'Paperback', isbn13: '978-1612423074', price: '$22.99' },
       { format: 'Hardcover', isbn13: '978-1612423067', price: '$34.99' }
-    ]
+    ],
+    synopsis: 'Following the events of Qualify, Compete, and Win, the Games of the Atlantis Grail have come to a ground-shaking halt. Gwen Lark, who successfully navigated the trials, must now face the ultimate challenge. The final battle has arrived, and Gwen, along with everyone she loves, must engage in the greatest fight of their lives to protect both Earth and Atlantis from a looming cosmic threat.'
   },
   {
     slug: 'book-of-everything',
@@ -129,7 +133,8 @@ export const books: Book[] = [
       { label: 'Kobo', url: 'https://www.kobo.com/us/en/ebook/eos-18' },
       { label: 'Apple', url: 'https://books.apple.com/us/book/eos/id6748926233' },
       { label: 'Google Play', url: 'https://play.google.com/store/books/details/Vera_Nazarian_Eos?id=GLdyEQAAQBAJ' }
-    ]
+    ],
+    synopsis: 'Set in 10,504 B.C.E. in the high-tech capital of Atlantis, Poseidon, as a catastrophic asteroid hurtles toward Earth. Semmi, a street-smart sixteen-year-old, is thrust into a world of Imperial Court intrigue when she discovers the secret identity of Benaten Bisfuri, a powerful nobleman and vigilante. To save her family from the coming global apocalypse, Semmi must compete in the brutal Service Competitions to earn a spot on the ark-ships leaving Earth.'
   },
   {
     slug: 'dea',
@@ -195,7 +200,8 @@ export const books: Book[] = [
       { label: 'Kobo', url: 'https://www.kobo.com/us/en/ebook/aeson-blue' },
       { label: 'Apple', url: 'https://books.apple.com/us/book/id1559414457' },
       { label: 'Google Play', url: 'https://play.google.com/store/books/details?id=__IkEAAAQBAJ&PAffiliateID=1100lfd4s' }
-    ]
+    ],
+    synopsis: 'Aeson: Blue takes readers back to a time before the main Atlantis Grail series. The story follows a young Imperial Crown Prince Aeson Kassiopei. Intelligent, well-educated, and deeply isolated by the privilege of the divine Imperial Dynasty, Aeson enters the Fleet Cadet School and experiences the "real world" for the very first time. He must learn to navigate the challenges of being just another student, making friends and bonding with peers who will shape his destiny.'
   },
   {
     slug: 'aeson-black',
@@ -215,7 +221,8 @@ export const books: Book[] = [
       { label: 'Kobo', url: 'https://www.kobo.com/us/en/ebook/aeson-black' },
       { label: 'Apple', url: 'https://books.apple.com/us/book/aeson-black/id1619898516?at=1010l9S2&uo=4&mt=11' },
       { label: 'Google Play', url: 'https://play.google.com/store/books/details?id=GphrEAAAQBAJ' }
-    ]
+    ],
+    synopsis: "Follows Aeson Kassiopei, the Imperial Crown Prince of Atlantis, as he navigates a pivotal period in his life after surviving a fiery death at Ae-Leiterra. Aeson must grapple with the aftermath of that experience, the responsibility of his position, and an impossible choice between love and duty. Intended for mature audiences, this novella provides a deep, character-focused look into Aeson's history, motivations, and growth."
   },
   {
     slug: 'xelio-red',
@@ -248,7 +255,8 @@ export const books: Book[] = [
       { label: 'Kobo', url: 'https://www.kobo.com/us/en/ebook/the-atlantis-grail-companion' },
       { label: 'Apple', url: 'https://books.apple.com/us/book/the-atlantis-grail-companion/id1601204268' },
       { label: 'Google Play', url: 'https://play.google.com/store/books/details?id=dqdVEAAAQBAJ' }
-    ]
+    ],
+    synopsis: 'The ultimate reference guide to the things, places, rules, and customs of the Atlantis Grail universe. A comprehensive encyclopedia for superfans, this volume features detailed world-building explanations, glossaries of the Atlanteo language, schematics, drawings, and exclusive lore not found in the main novels.'
   },
   {
     slug: 'people-of-tag',
@@ -268,6 +276,7 @@ export const books: Book[] = [
       { label: 'Kobo', url: 'https://www.kobo.com/us/en/ebook/people-of-the-atlantis-grail' },
       { label: 'Apple', url: 'https://books.apple.com/us/book/people-of-the-atlantis-grail/id6445756530' },
       { label: 'Google Play', url: 'https://play.google.com/store/books/details?id=qGmuEAAAQBAJ&PAffiliateID=1100lfd4s' }
-    ]
+    ],
+    synopsis: "The definitive character guide and dramatis personae for the Atlantis Grail universe. This book offers a detailed look at the thousands of characters who populate the series—including humans, aliens, and felines—along with personal facts, new character-specific revelations, and special features like the Atlantean Zodiac."
   }
 ];

@@ -26,6 +26,7 @@ export interface Book {
   coverImage: string;
   buyLinks: BuyLink[];
   editions?: Edition[];
+  synopsis?: string;
 }
 
 export interface NewsEntry {
