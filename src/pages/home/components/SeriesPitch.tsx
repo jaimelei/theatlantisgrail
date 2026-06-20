@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useScrollReveal from '../../../hooks/useScrollReveal';
 
 const revealClass = (isVisible: boolean) =>
@@ -52,12 +53,12 @@ export default function SeriesPitch() {
 
             {/* Small CTA below cover */}
             <div ref={ctaRef} className={`mt-8 text-center lg:text-left ${revealClass(ctaVisible)}`}>
-              <a
-                href="#"
+              <Link
+                to="/books"
                 className="inline-flex items-center gap-2 font-body text-sm font-bold uppercase tracking-widest text-wine-700 hover:text-wine-600 hover:gap-3 transition-all duration-300"
               >
                 Get Book 1 Free <span className="text-base">→</span>
-              </a>
+              </Link>
             </div>
           </div>
 

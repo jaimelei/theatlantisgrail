@@ -130,7 +130,7 @@ export default function BookShowcase() {
                 </div>
 
                 {/* Mobile Horizontal Scroll Strip */}
-                <div className="md:hidden w-full overflow-x-auto flex gap-6 px-4 py-6 scroll-snap-type-x mandatory scrollbar-thin">
+                <div className="md:hidden w-full overflow-x-auto flex gap-6 px-4 py-6 snap-x snap-mandatory scrollbar-thin">
                   {group.books.map((book) => {
                     const isActive = book.slug === activeBook.slug;
                     return (

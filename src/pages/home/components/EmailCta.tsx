@@ -52,19 +52,19 @@ export default function EmailCta() {
               out.
             </p>
 
-            <form onSubmit={handleSubscribe} className="flex gap-2">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 w-full">
               <input
                 type="email"
                 placeholder="Your email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled
-                className="flex-1 px-4 py-2 bg-white border rounded cursor-not-allowed border-cosmos-200 text-cosmos-950 placeholder-cosmos-400 focus:outline-none focus:border-gold-400 opacity-60"
+                className="w-full sm:flex-1 px-4 py-2 bg-white border rounded cursor-not-allowed border-cosmos-200 text-cosmos-950 placeholder-cosmos-400 focus:outline-none focus:border-gold-400 opacity-60"
               />
 
               <button
                 type="submit"
-                className="px-6 py-2 font-semibold transition-colors rounded bg-gold-400 text-cosmos-950 font-inter hover:bg-gold-300"
+                className="w-full sm:w-auto px-6 py-2 font-semibold transition-colors rounded bg-gold-400 text-cosmos-950 font-inter hover:bg-gold-300 whitespace-nowrap"
               >
                 Subscribe
               </button>
@@ -98,7 +98,7 @@ export default function EmailCta() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3">
               {/* Red */}
               <div
                 ref={redRef}

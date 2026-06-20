@@ -22,7 +22,7 @@ export default function FilmCallout() {
             {/* Left Side: Text Content */}
             <div
               ref={leftRef}
-              className="transition-all duration-700 opacity-[var(--left-opacity)] [transform:translateY(var(--left-y))] md:opacity-[var(--section-opacity)] md:[transform:translateY(var(--section-y))]"
+              className="order-last lg:order-first transition-all duration-700 opacity-[var(--left-opacity)] [transform:translateY(var(--left-y))] md:opacity-[var(--section-opacity)] md:[transform:translateY(var(--section-y))]"
               style={
                 {
                   '--left-opacity': leftVisible ? 1 : 0,
@@ -49,7 +49,7 @@ export default function FilmCallout() {
             {/* Right Side: YouTube Embed */}
             <div
               ref={rightRef}
-              className="aspect-video w-full max-w-lg mx-auto lg:mx-0 transition-all duration-700 opacity-[var(--right-opacity)] [transform:translateY(var(--right-y))] md:opacity-[var(--section-opacity)] md:[transform:translateY(var(--section-y))]"
+              className="order-first lg:order-last aspect-video w-full max-w-lg mx-auto lg:mx-0 transition-all duration-700 opacity-[var(--right-opacity)] [transform:translateY(var(--right-y))] md:opacity-[var(--section-opacity)] md:[transform:translateY(var(--section-y))]"
               style={
                 {
                   '--right-opacity': rightVisible ? 1 : 0,
