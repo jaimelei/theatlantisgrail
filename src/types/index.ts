@@ -39,3 +39,17 @@ export interface NewsEntry {
   category?: 'Release' | 'Update' | 'Community';
 }
 
+export interface CommunityLink {
+  name: string;
+  description: string;
+  url: string;
+  icon?: string;
+}
+
+export interface CommunityGroup {
+  id: string;
+  title: string;
+  description?: string;
+  links: CommunityLink[];
+}
+
